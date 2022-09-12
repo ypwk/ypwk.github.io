@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding-left: 10px;
+}
+
 .project-title {
     margin-top: 15%;
     margin-bottom: 5%
@@ -22,6 +26,37 @@ a {
     margin-bottom: 2%
 }
 
+/* Font Awesome Styling
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+
+  .fa-linkedin {
+    background: black;
+    color: white;
+  }
+
+  .fa-github {
+    background: black;
+    color: white;
+  }
+
+  .fa-envelope {
+    background: black;
+    color: white;
+  }
 
 /* Profile Picture Styling
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

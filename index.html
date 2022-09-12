@@ -3,35 +3,37 @@
 
 <head>
 
-    <!-- Basic Page Needs
+  <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>Kevin Wu</title>
-    <meta name="description" content="A personal webpage about me!">
-    <meta name="author" content="Kevin Wu">
+  <meta charset="utf-8">
+  <title>Kevin Wu</title>
+  <meta name="description" content="A personal webpage about me!">
+  <meta name="author" content="Kevin Wu">
 
-    <!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT
+  <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-    <!-- CSS
+  <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
 
-    <!-- Favicon
+  <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
 </head>
 
 <body>
-    <!-- Nav
+  <!-- Nav
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <nav id="navbar" class="">
     <div class="nav-wrapper">
@@ -80,53 +82,66 @@
     </ul>
   </div>
 
-    <!-- Primary Page Layout
+  <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
-        <div class="row">
-            <div class="one-half column project-title">
-                <h1>Kevin Wu</h1>
-                <h5>Undergraduate Software Developer</h5>
-                <p>
-                    Hi there!
-                    My name is Kevin Wu, and I am a student at William & Mary looking to graduate in 2024.
-                </p>
-            </div>
-            <div class="one-half column" style="margin-top: 25%">
-                <img class="img-fit" src="images/pfp.png">
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="one-half column project-title">
+        <h1>Kevin Wu</h1>
+      </div>
     </div>
-    </div>
+    <div class="row">
+      <div class="one-half column">
+        <h5>Undergraduate Software Developer</h5>
+        <p>
+          Hi there!
+          My name is Kevin Wu, and I am a student at William & Mary looking to graduate 
+          in 2024. <br><br>
 
-        <!-- Mobile Animation
+          Right now, I am interested in both software development and quantum error correction. <br><br>
+
+          In my free time, I like to play the violin. I'm currently working on the first 
+          movement of the Tchaikovsky Violin Concerto!
+        </p>
+        <p>
+          
+        </p>
+      </div>
+      <div class="one-half column">
+        <img class="img-fit" src="images/pfp.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Mobile Animation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script>
-         let menuIcon = document.querySelector('.menuIcon');
-        let nav = document.querySelector('.overlay-menu');
+  <script>
+    let menuIcon = document.querySelector('.menuIcon');
+    let nav = document.querySelector('.overlay-menu');
 
-        menuIcon.addEventListener('click', () => {
-            if (nav.style.transform != 'translateX(0%)') {
-                nav.style.transform = 'translateX(0%)';
-                nav.style.transition = 'transform 0.2s ease-out';
-            } else { 
-                nav.style.transform = 'translateX(-100%)';
-                nav.style.transition = 'transform 0.2s ease-out';
-            }
-        });
+    menuIcon.addEventListener('click', () => {
+      if (nav.style.transform != 'translateX(0%)') {
+        nav.style.transform = 'translateX(0%)';
+        nav.style.transition = 'transform 0.2s ease-out';
+      } else {
+        nav.style.transform = 'translateX(-100%)';
+        nav.style.transition = 'transform 0.2s ease-out';
+      }
+    });
 
 
-        let toggleIcon = document.querySelector('.menuIcon');
+    let toggleIcon = document.querySelector('.menuIcon');
 
-        toggleIcon.addEventListener('click', () => {
-            if (toggleIcon.className != 'menuIcon toggle') {
-                toggleIcon.className += ' toggle';
-            } else {
-                toggleIcon.className = 'menuIcon';
-            }
-        });
-    </script>
-    <!-- End Document
+    toggleIcon.addEventListener('click', () => {
+      if (toggleIcon.className != 'menuIcon toggle') {
+        toggleIcon.className += ' toggle';
+      } else {
+        toggleIcon.className = 'menuIcon';
+      }
+    });
+  </script>
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 

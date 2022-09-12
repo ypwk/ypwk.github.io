@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -25,11 +26,17 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
+
 <body>
-    <!-- Nav
+  <!-- Nav
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <nav id="navbar" class="">
     <div class="nav-wrapper">
@@ -78,46 +85,53 @@
     </ul>
   </div>
 
-    
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
       <div class="" style="margin-top: 15%">
         <h1>Contact</h1>
-        <p>Reach out to me at kevinpw@gmail.com!</p>
-    </div>
+        <p>
+          Please feel free to reach out!
+        </p>
+      </div>
+
+      <a href="https://www.linkedin.com/in/ypwk/" target="_blank" class="fa fa-linkedin"></a>
+      <a href="https://github.com/ypwk" target="_blank" class="fa fa-github"></a>
+      <a href="mailto:kevinypw@gmail.com" target="_blank" class="fa fa-envelope"></a>
     </div>
   </div>
-          <!-- Mobile Animation
+  <!-- Mobile Animation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script>
     let menuIcon = document.querySelector('.menuIcon');
-   let nav = document.querySelector('.overlay-menu');
+    let nav = document.querySelector('.overlay-menu');
 
-   menuIcon.addEventListener('click', () => {
-       if (nav.style.transform != 'translateX(0%)') {
-           nav.style.transform = 'translateX(0%)';
-           nav.style.transition = 'transform 0.2s ease-out';
-       } else { 
-           nav.style.transform = 'translateX(-100%)';
-           nav.style.transition = 'transform 0.2s ease-out';
-       }
-   });
+    menuIcon.addEventListener('click', () => {
+      if (nav.style.transform != 'translateX(0%)') {
+        nav.style.transform = 'translateX(0%)';
+        nav.style.transition = 'transform 0.2s ease-out';
+      } else {
+        nav.style.transform = 'translateX(-100%)';
+        nav.style.transition = 'transform 0.2s ease-out';
+      }
+    });
 
 
-   let toggleIcon = document.querySelector('.menuIcon');
+    let toggleIcon = document.querySelector('.menuIcon');
 
-   toggleIcon.addEventListener('click', () => {
-       if (toggleIcon.className != 'menuIcon toggle') {
-           toggleIcon.className += ' toggle';
-       } else {
-           toggleIcon.className = 'menuIcon';
-       }
-   });
-</script>
+    toggleIcon.addEventListener('click', () => {
+      if (toggleIcon.className != 'menuIcon toggle') {
+        toggleIcon.className += ' toggle';
+      } else {
+        toggleIcon.className = 'menuIcon';
+      }
+    });
+  </script>
 
-<!-- End Document
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
 </html>

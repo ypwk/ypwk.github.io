@@ -26,7 +26,11 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
 
 </head>
 
@@ -92,7 +96,11 @@
       <div class="project-individual">
         <div class="row">
           <div class="one-half column">
-            <h3>Finance App</h3>
+            <h3>
+              <u>
+                <a href="https://github.com/ypwk/FinanceTracker" target="_blank">Finance App</a>
+              </u>
+            </h3>
           </div>
           <div class="one-half column">
             <h5 class="u-pull-right">In Progress</h5>
@@ -101,7 +109,7 @@
         </div>
         <div class="row">
           <p>
-            A finance tracking app powered with Plaid. 
+            A finance tracking app powered with Plaid, React, and Electron. See the link for more information.
           </p>
         </div>
       </div>
@@ -122,7 +130,8 @@
             Maze generation was done using a selection from a set of Minimum Spanning Tree algorithms (e.g. Prim,
             Borouvka, Depth First Search).
             Automated exploration was done with differing pathfinding algorithms and virtual agents (robots), some with
-            reduced vision or movement capabilities.
+            reduced vision or movement capabilities. <br><br>
+            As this was an extension of a class project assigned every semester, I will not disclose the source code. 
           </p>
         </div>
       </div>
@@ -141,8 +150,35 @@
         <div class="row">
           <p>
             2048 clone written in Java, complete with a decision-making AI that can beat the game. <br><br>
+
             There are two automated players bundled with this project, a Random Player that makes random choices,
-            and a Smart Player that makes choices based on a set of heuristics.
+            and a Smart Player that makes choices based on a set of heuristics. <br><br>
+
+            At each step during execution, the Smart Player calculates a score for the respective up, down, right, and left movements. <br><br>
+
+            The heuristics that the Smart Player uses are as follows:
+            <ul>
+              <li>
+                Empty Space — The player weights for empty space in resulting board configurations. 
+                This is calculated by counting the pieces on the board.
+              </li>
+              <li>
+                Edge Value — The player weights for larger value pieces on the edge of the board. 
+                It also heavily punishes the player if the maximum tile is not in a corner, and this punishment gets worse as the maximum tile increases in value. 
+              </li>
+              <li>
+                Tile Monotonicity — The player weights for sequences of tiles of close or incrementing value, 
+                with respect to powers of two (e.g. 2, 4, 8, 16 or 2, 4, 4, 8)
+              </li>
+              <li>
+                Game Score — The player weights for a higher score. Score is calculated by summing the numerical values of combined tiles. Combining two “4” tiles yields a score of 8. 
+              </li>
+            </ul>
+            To improve performance on my slow laptop, the Smart Player utilizes a dynamic recursive depth to “think more” when it is in trouble. 
+            The more empty tiles there are, the less steps it thinks ahead, and vice versa. <br><br>
+
+
+            As this was an extension of a class project assigned every semester, I will not disclose the source code.
           </p>
         </div>
       </div>
@@ -150,7 +186,11 @@
       <div class="project-individual">
         <div class="row">
           <div class="one-half column">
-            <h3>ShiHelper</h3>
+            <h3>
+              <u>
+                <a href="https://github.com/ypwk/shihelper" target="_blank">ShiHelper</a>
+              </u>
+            </h3>
           </div>
           <div class="one-half column">
             <h5 class="u-pull-right">April 2021</h5>
@@ -161,7 +201,7 @@
           <p>
             A specialized text editor created using React to aid in analysis and composition
             of Chinese regulated-verse poetry.
-            Included annotations for English, Middle Chinese, and Mandarin.
+            Included annotations for English, Middle Chinese, and Mandarin. See the link for more information.
           </p>
         </div>
       </div>
