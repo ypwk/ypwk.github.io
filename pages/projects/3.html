@@ -1,0 +1,32 @@
+---
+layout: project_template
+permalink: /projects/3/
+title: "Project 3: Acquiring, Modifying and Describing the Data"
+detailed_desc: First, I imported data using FTP, extracted it using multithreading, and ended up with many different variables. Then, I plotted population density vs DST011 as a histogram. 
+long-info:
+    - type: "img"
+      content: /assets/img/gtm_density_v_dst011.png
+    - type: "brk"
+    - type: "txt"
+      content: "Next, I plotted population density vs water"
+    - type: "img"
+      content: /assets/img/gtm_density_v_water.png
+    - type: "brk"
+    - type: "txt"
+      content: "Next, I regressed the data from two variables and examined the relationship being described by the two varaibles using statistical measures."
+    - type: "img"
+      content: /assets/img/gtm_lulc_night.png
+    - type: "txt"
+      content: "These are the results of the statistical analysis: There is a 0.5391 r-squared value, meaning that there is a moderate correlation between night lights and population density."
+    - type: "code"
+      content: gtm_lulc_night_stats.html
+    - type: "txt"
+    - type: "brk"
+      content: "Finally, I did the same thing, but for all the different variables."
+    - type: "img"
+      content: /assets/img/gtm_lulc_everything.png
+    - type: "txt"
+      content: "These are the results of the statistical analysis: There is a 0.6832 r-squared value, meaning that there is a moderate correlation between the aggregate variables and population density."
+    - type: "code"
+      content: gtm_lulc_everything_stats.html
+---

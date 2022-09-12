@@ -1,0 +1,35 @@
+- name: Day One Challenge
+  descr: "A plot of my dog in the morning."
+  demo: https://kevinypw.github.io/Data100/informal/1
+  tags:
+    - tag: R
+  
+- name: Informal Response 1
+  descr: "A response to Blumenstock's article."
+  demo: https://kevinypw.github.io/Data100/informal/2
+  tags:
+    - tag: Reflection
+
+- name: Informal Response 2
+  descr: "A response to Kitchen's article."
+  demo: https://kevinypw.github.io/Data100/informal/3
+  tags:
+    - tag: Reflection
+
+- name: Informal Response 3
+  descr: "A response to Barder's article."
+  demo: https://kevinypw.github.io/Data100/informal/4
+  tags:
+    - tag: Reflection
+
+- name: Informal Response 4
+  descr: "A response to Owen's article."
+  demo: https://kevinypw.github.io/Data100/informal/5
+  tags:
+    - tag: Reflection
+
+- name: Informal Response 5
+  descr: "Final Reflection"
+  demo: https://kevinypw.github.io/Data100/informal/6
+  tags:
+    - tag: Reflection

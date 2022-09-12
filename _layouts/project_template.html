@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="manifest" href="{{ "/assets/favicon/site.webmanifest" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/vendors.min.css" | prepend: site.baseurl }}">
+
+  <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="load">
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+    </div>
+  </div>
+  <div class="layout">
+    <section class="card neumorphism-card-big">
+      <h1 class="title"><span>{{page.title}}</span></h1>
+    {% if page.detailed_desc %}
+      <p style = "line-height: 2;">{{page.detailed_desc}}</p>
+    {% endif %}
+    {% if page.tags %}
+      <div class="tag-wrapper">
+        {% for tag in page.tags %}
+          <span class="tag neumorphism-card">{{tag.tag}}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if page.response_loc %}
+        {% include {{page.response_loc}}%}
+    {% endif %}
+    {% if page.long-info %}
+      {% for sec in page.long-info %}
+        {% if sec.type == "img"%}
+          <img src="{{ sec.content | prepend: site.baseurl }}" style="max-width: 100%; max-height: 100%;">
+        {% elsif sec.type == "txt"%}
+          <p style="line-height: 2;">
+            {{sec.content}}
+          </p>
+        {% elsif sec.type == "brk" %}
+          <p style="line-height: 4; text-align: center;">
+            ___
+          </p>
+        {% elsif sec.type == "mov" %}
+          <video controls autoplay>
+            <source src="{{ sec.content | prepend: site.baseurl }}" type="video/mp4" style="max-width: 100%; max-height: 100%;">
+            Your browser does not support the video tag.
+          </video>
+        {% elsif sec.type == "code" %}
+          <code>
+            {% include {{sec.content}} %}
+          </code>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    </section>
+  {% include footer.html %}
+</body>
+</html>

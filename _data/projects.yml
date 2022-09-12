@@ -1,0 +1,35 @@
+- name: "Project 1: LIBM Country Map"
+  descr: "I plotted a map of Gabon."
+  demo: https://kevinypw.github.io/Data100/projects/1/
+  tags:
+    - tag: R
+- name: "Project 2.1: Extracting Populations from a Raster and Aggregating to each Unit"
+  descr: "I plotted population data for Guatemala."
+  demo: https://kevinypw.github.io/Data100/projects/2/
+  tags:
+    - tag: R
+- name: "Project 2.2: Creating a Geometric Bar Plot with an Simple Feature object"
+  descr: "I plotted population density data for Guatemala."
+  demo: https://kevinypw.github.io/Data100/projects/2_2/
+  tags:
+    - tag: R
+- name: "Project 3: Acquiring, Modifying and Describing the Data"
+  descr: "I used FTP to get data for Guatemala, and then analyzed it."
+  demo: https://kevinypw.github.io/Data100/projects/3/
+  tags:
+    - tag: R
+- name: "Project 4: Modeling and Predicting Spatial Values"
+  descr: "Using land use and land cover variables, I predicted Guatemala's Population using different methods of analysis."
+  demo: https://kevinypw.github.io/Data100/projects/4/
+  tags:
+    - tag: R
+- name: "Project 5: De Facto Description of Human Settlements and Urban Areas"
+  descr: "I produced a geospatial plot that describes de facto boundaries and human settlements and urbanization throughout a subset of Guatemala."
+  demo: https://kevinypw.github.io/Data100/projects/5/
+  tags:
+    - tag: R
+- name: "Final Project: Accessiblity 3"
+  descr: "I produced a 3D geospatial plot that describes de facto boundaries and human settlements and urbanization throughout a subset of Guatemala."
+  demo: https://kevinypw.github.io/Data100/projects/6/
+  tags:
+    - tag: R
