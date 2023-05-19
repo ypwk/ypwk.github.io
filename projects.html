@@ -144,6 +144,12 @@
 
         <div class="row">
           <p>
+            We experimented with approaches utilizing deep learning, reinforcement learning, and genetic algorithms. 
+          </p>
+        </div>
+
+        <div class="row">
+          <p>
             The W&M team won third place and $20k in prize money.
           </p>
         </div>
@@ -237,9 +243,9 @@
             There are two automated players bundled with this project, a Random Player that makes random choices,
             and a Smart Player that makes choices based on a set of heuristics. <br><br>
 
-            At each step during execution, the Smart Player calculates a score for the respective up, down, right, and left movements. <br><br>
+            At each step during execution, the Smart Player calculates a score for the respective up, down, right, and left movements and chooses the highest score. <br><br>
 
-            The heuristics that the Smart Player uses are as follows:
+            <!-- The heuristics that the Smart Player uses are as follows:
             <ul>
               <li>
                 Empty Space — The player weights for empty space in resulting board configurations. 
@@ -256,7 +262,7 @@
               <li>
                 Game Score — The player weights for a higher score. Score is calculated by summing the numerical values of combined tiles. Combining two “4” tiles yields a score of 8. 
               </li>
-            </ul>
+            </ul> -->
             To improve performance on my slow laptop, the Smart Player utilizes a dynamic recursive depth to “think more” when it is in trouble. 
             The more empty tiles there are, the less steps it thinks ahead, and vice versa. <br><br>
 
