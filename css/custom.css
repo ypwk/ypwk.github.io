@@ -400,7 +400,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding-right: 15px;
@@ -437,4 +437,39 @@ ul {
     color: rgb(28, 121, 184);
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
+}
+
+
+/* Prufer Animation 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.prufer g circle {
+    stroke: #1b3978;
+    stroke-width: 1.5px;
+}
+
+.prufer g text {
+    width: 0;
+    height: 0;
+    color: white;
+    text-anchor: middle;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    pointer-events: none;
+}
+
+.prufer line.link {
+    stroke: #222;
+    stroke-opacity: .6;
+    stroke-width: 2px;
+}
+
+
+.prufer {
+    overflow: visible;
+    position:fixed; 
+    top:10%; 
+    left:0; 
+    height:100%; 
+    width:100%
 }

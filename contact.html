@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <!-- Basic Page Needs
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Kevin Wu</title>
-  <meta name="description" content="A personal webpage about me!">
-  <meta name="author" content="Kevin Wu">
+    <meta charset="utf-8" />
+    <title>Kevin Wu</title>
+    <meta name="description" content="A personal webpage about me!" />
+    <meta name="author" content="Kevin Wu" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
-  <!-- Favicon
+    <!-- JavaScript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/d3.js"></script>
 
-
-</head>
-
-<body>
-  <!-- Nav
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <nav id="navbar" class="">
-    <div class="nav-wrapper">
-      <div class="logo">
-        <a href="index.html">KW</a>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Nav
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav id="navbar" class="">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="index.html">KW</a>
+        </div>
+
+        <!-- Navbar Links -->
+        <ul id="menu">
+          <li>
+            <a href="index.html">About</a>
+          </li>
+          <li>
+            <a href="projects.html">Projects</a>
+          </li>
+          <li>
+            <a href="experience.html">Experience</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
+    </nav>
 
-      <!-- Navbar Links -->
+    <div class="menuIcon">
+      <span class="icon icon-bars"></span>
+      <span class="icon icon-bars overlay"></span>
+    </div>
+
+    <div class="overlay-menu">
       <ul id="menu">
         <li>
           <a href="index.html">About</a>
@@ -60,96 +104,221 @@
         </li>
       </ul>
     </div>
-  </nav>
 
-  <div class="menuIcon">
-    <span class="icon icon-bars"></span>
-    <span class="icon icon-bars overlay"></span>
-  </div>
-
-
-  <div class="overlay-menu">
-    <ul id="menu">
-      <li>
-        <a href="index.html">About</a>
-      </li>
-      <li>
-        <a href="projects.html">Projects</a>
-      </li>
-      <li>
-        <a href="experience.html">Experience</a>
-      </li>
-      <li>
-        <a href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
-
-
-  <!-- Primary Page Layout
+    <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="" style="margin-top: 15%">
-        <h1>Contact</h1>
-        <p>
-          Please feel free to reach out!
-        </p>
+    <div class="container">
+      <div class="row">
+        <div class="" style="margin-top: 15%">
+          <h1>Contact</h1>
+          <p>Please feel free to reach out!</p>
+        </div>
+        <ul>
+          <li>
+            <u>
+              <a href="https://www.linkedin.com/in/ypwk/" target="_blank">
+                LinkedIn
+              </a>
+            </u>
+          </li>
+          <li>
+            <u>
+              <a href="https://github.com/ypwk" target="_blank">Github</a>
+            </u>
+          </li>
+          <li>
+            <u>
+              <a href="mailto:kevinypw@gmail.com" target="_blank">Email</a>
+            </u>
+          </li>
+        </ul>
+        <p>My phone number is the Prüfer code for the following tree:</p>
       </div>
-
-      <ul>
-        <li>
-          <u>
-            <a href="https://www.linkedin.com/in/ypwk/" target="_blank">
-              LinkedIn
-            </a>
-          </u>
-        </li>
-        <li>
-          <u>
-            <a href="https://github.com/ypwk" target="_blank">Github</a>
-          </u>
-        </li>
-        <li>
-          <u>
-            <a href="mailto:kevinypw@gmail.com" target="_blank">Email</a>
-          </u>
-        </li>
-      </ul>
-      
-      
     </div>
-  </div>
-  <!-- Mobile Animation
+
+    <!-- Mobile Animation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script>
-    let menuIcon = document.querySelector('.menuIcon');
-    let nav = document.querySelector('.overlay-menu');
+    <script>
+      let menuIcon = document.querySelector(".menuIcon");
+      let nav = document.querySelector(".overlay-menu");
 
-    menuIcon.addEventListener('click', () => {
-      if (nav.style.transform != 'translateX(0%)') {
-        nav.style.transform = 'translateX(0%)';
-        nav.style.transition = 'transform 0.2s ease-out';
-      } else {
-        nav.style.transform = 'translateX(-100%)';
-        nav.style.transition = 'transform 0.2s ease-out';
-      }
-    });
+      menuIcon.addEventListener("click", () => {
+        if (nav.style.transform != "translateX(0%)") {
+          nav.style.transform = "translateX(0%)";
+          nav.style.transition = "transform 0.2s ease-out";
+        } else {
+          nav.style.transform = "translateX(-100%)";
+          nav.style.transition = "transform 0.2s ease-out";
+        }
+      });
 
+      let toggleIcon = document.querySelector(".menuIcon");
 
-    let toggleIcon = document.querySelector('.menuIcon');
+      toggleIcon.addEventListener("click", () => {
+        if (toggleIcon.className != "menuIcon toggle") {
+          toggleIcon.className += " toggle";
+        } else {
+          toggleIcon.className = "menuIcon";
+        }
+      });
+    </script>
 
-    toggleIcon.addEventListener('click', () => {
-      if (toggleIcon.className != 'menuIcon toggle') {
-        toggleIcon.className += ' toggle';
-      } else {
-        toggleIcon.className = 'menuIcon';
-      }
-    });
-  </script>
-
-  <!-- End Document
+    <!-- Prufer Code Animation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+    <script>
+      /* SVG frame creation */
+      var w = window.innerWidth,
+          h = window.innerHeight,
+          fbBlue = d3.rgb("#3b5998"),
+          fill = [fbBlue.brighter(2), fbBlue.brighter(), fbBlue, fbBlue.darker()];
 
+      var nodes = d3.range(1, 13).map(function (i) {
+        return {
+          id: i,
+          in: 0,
+          out: 0,
+        };
+      });
+
+      var vis = d3
+        .select("body")
+        .append("svg:svg")
+        .attr("class", "prufer")
+        .attr("width", w)
+        .attr("height", h);
+
+      var links = [
+        {source: 5, target: 8},
+        {source: 6, target: 8},
+        {source: 0, target: 8},
+        {source: 4, target: 6},
+        {source: 1, target: 6},
+        {source: 2, target: 4},
+        {source: 9, target: 1},
+        {source: 10, target: 0},
+        {source: 7, target: 0},
+        {source: 3, target: 5},
+        {source: 11, target: 3}
+      ];
+
+      /* Store number of connections of each node */
+      links.forEach(function (d, i) {
+        nodes[d.source].out++;
+        nodes[d.target].in++;
+      });
+
+      /* Force paramettring */
+      var force = d3.layout
+        .force()
+        .charge(-200)
+        .linkDistance(30)
+        .linkStrength(0.1)
+        .size([w, h])
+        .nodes(nodes)
+        .links(links)
+        .start();
+
+      /*Link creation template */
+      var link = vis
+        .selectAll(".link")
+        .data(links)
+        .enter()
+        .append("line")
+        .attr("class", "link");
+
+      /*Node creation template */
+        
+      var node = vis
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) {
+          return d.x;
+        }) //x
+        .attr("cy", function (d) {
+          return d.y;
+        }) //y
+        .attr("r", 10)
+        .style("fill", function (d, i) {
+          return fill[parseInt((d.in + 1) / 3)];
+        })
+        .call(force.drag);
+      
+      var label = vis
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .enter()
+        .append("text")
+        .text(function (d) { return d.id; })
+        .attr("x", function (d) {
+          return d.x;
+        })
+        .attr("y", function (d) {
+          return d.y + 5;
+        });
+        
+      /* Start transition */
+      vis
+        .style("opacity", 1e-6)
+        .transition()
+        .duration(1000)
+        .style("opacity", 1);
+
+      //Forces in action
+      force.on("tick", function (e) {
+        link
+          .attr("x1", function (d) {
+            return d.source.x;
+          })
+          .attr("y1", function (d) {
+            return d.source.y;
+          })
+          .attr("x2", function (d) {
+            return d.target.x;
+          })
+          .attr("y2", function (d) {
+            return d.target.y;
+          });
+
+        node
+          .attr("cx", function (d) {
+            return d.x;
+          })
+          .attr("cy", function (d) {
+            return d.y;
+          });
+
+        label
+          .attr("x", function (d) {
+            return d.x;
+          })
+          .attr("y", function (d) {
+            return d.y + 5;
+          });
+      });
+
+      /* Click-plosion*/
+      d3.select("body").on("dblclick", function () {
+        nodes.forEach(function (o, i) {
+          o.x += (Math.random() - 0.5) * 200;
+          o.y += (Math.random() - 0.5) * 200;
+        });
+        force.resume();
+      });
+      d3.selectAll(".node").on("click", function (d, i) {
+        d3.event.stopPropagation();
+      });
+      d3.selectAll(".node").on("dblclick", function (d, i) {
+        d.fixed = !d.fixed;
+        d3.event.stopPropagation();
+      });
+
+    </script>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
 </html>
