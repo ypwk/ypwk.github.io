@@ -24,7 +24,7 @@ jobs:
           # update the Node version to meet your needs
           node-version: 18
           cache: npm
-          cache-dependency-path: '**/reactWebsite/package-lock.json'
+          cache-dependency-path: './reactWebsite/package-lock.json'
 
       - name: Build
         run: |
