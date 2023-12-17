@@ -27,6 +27,7 @@ jobs:
           cache-dependency-path: './reactWebsite/package-lock.json'
 
       - name: Build
+        working-directory: reactWebsite
         run: |
           npm ci
           npm run build
