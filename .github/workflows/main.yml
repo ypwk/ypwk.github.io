@@ -13,11 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Update package-lock.json
+        run: |
+          cd reactWebsite
+          rm package-lock.json
+          npm install
+
       - uses: actions/setup-node@v3
         with:
           # update the Node version to meet your needs
           node-version: 16
           cache: npm
+          cache-dependecy: reactWebsite/package-lock.json
 
       - name: Build
         run: |
