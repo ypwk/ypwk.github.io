@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ pages }) => {
       <nav id="navbar" className="">
         <div className="nav-wrapper">
           <div className="logo">
-            <a href="/">KW</a>
+            <a href="https://ypwk.github.io/">KW</a>
           </div>
           <ul id="menu">
             {pages.map((pageName, index) => (
