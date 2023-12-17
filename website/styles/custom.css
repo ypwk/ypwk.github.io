@@ -439,12 +439,12 @@ ul {
 
 /* Prufer Animation 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.prufer g circle {
+.prufer circle {
     stroke: #1b3978;
     stroke-width: 1.5px;
 }
 
-.prufer g text {
+.prufer text {
     width: 0;
     height: 0;
     color: white;
@@ -465,8 +465,8 @@ ul {
 .prufer {
     overflow: visible;
     position: relative; 
-    top:0; 
+    top:100px; 
     left:0; 
-    height:35%; 
+    height:50%; 
     width:100%;
 }
