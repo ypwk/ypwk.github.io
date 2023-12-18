@@ -1,6 +1,9 @@
+import TabInfo from "@/components/TabInfo";
+
 export default function Page() {
   return (
     <div className="container">
+      <TabInfo tabName="Projects" />
       <div className="row">
         <div className="project-title">
           <h1>Projects</h1>
@@ -117,7 +120,8 @@ export default function Page() {
             </p>
 
             <p>
-              Created for Cypher VIII, William & Mary&apos;s Hackathon. Won best UI.
+              Created for Cypher VIII, William & Mary&apos;s Hackathon. Won best
+              UI.
             </p>
           </div>
         </div>

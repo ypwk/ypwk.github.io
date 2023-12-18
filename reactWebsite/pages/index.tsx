@@ -1,6 +1,9 @@
+import TabInfo from "@/components/TabInfo";
+
 export default function Page() {
   return (
     <div className="container">
+      <TabInfo tabName="Home" />
       <div className="row">
         <div className="one-half column project-title">
           <h1>Kevin Wu</h1>
@@ -27,9 +30,9 @@ export default function Page() {
             the gym!
           </p>
         </div>
-        <div className="one-half column">
+        {/* <div className="one-half column">
           <img className="img-fit" src="images/headshot.jpg" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

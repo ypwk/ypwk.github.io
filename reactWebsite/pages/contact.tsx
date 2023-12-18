@@ -1,9 +1,11 @@
 import PruferCodeAnimation from "@/components/PruferCode";
+import TabInfo from "@/components/TabInfo";
 
 export default function Page() {
   return (
     <div className="container">
-      <div className="project-title"></div>
+      <TabInfo tabName="Contact" />
+      <div className="proje>ct-title"></div>
       <div className="row">
         <div className="">
           <h1>Contact</h1>

@@ -1,6 +1,9 @@
+import TabInfo from "@/components/TabInfo";
+
 export default function Page() {
   return (
     <div>
+      <TabInfo tabName="Work & Education" />
       <div className="container">
         <div className="project-title">
           <h1>Work Experience</h1>

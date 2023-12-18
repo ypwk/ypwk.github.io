@@ -10,6 +10,7 @@ import "../styles/skeleton.css";
 import "../styles/custom.css";
 
 export default function App({ Component, pageProps }: AppProps) {
+  console.log(pageProps);
   return (
     <main className={raleway.className}>
       <Header pages={["Projects", "Work & Education", "Research", "Contact"]} />
