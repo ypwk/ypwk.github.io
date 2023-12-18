@@ -6,9 +6,10 @@ interface TabInfoProps {
 }
 
 const TabInfo: React.FC<TabInfoProps> = ({ tabName }) => {
+  const tabLabel = "Kevin Wu | " + tabName;
   return (
     <Head>
-      <title>Kevin Wu | {tabName}</title>
+      <title>{tabLabel}</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
