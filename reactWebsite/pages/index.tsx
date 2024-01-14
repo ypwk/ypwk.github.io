@@ -1,4 +1,5 @@
 import TabInfo from "@/components/TabInfo";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -30,9 +31,9 @@ export default function Page() {
             the gym!
           </p>
         </div>
-        {/* <div className="one-half column">
+        <div className="one-half column">
           <img className="img-fit" src="images/headshot.jpg" />
-        </div> */}
+        </div>
       </div>
     </div>
   );

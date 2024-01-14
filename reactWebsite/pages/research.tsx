@@ -1,120 +1,62 @@
-import TabInfo from "@/components/TabInfo";
 
-export default function Page() {
-  return (
-    <div>
-      <TabInfo tabName="Research" />
-      <div className="container">
+    import TabInfo from "@/components/TabInfo";
+    import ExpandableItem from "@/components/ExpandableItem";
+    import InfoCard from "@/components/InfoCard";
+
+    export default function Page() {
+    return (<div className="container">
+        <TabInfo tabName="Research" />
+        <div className="row">
         <div className="project-title">
-          <h1>Research Experience</h1>
+          <h3>Publications</h3>
         </div>
-
-        <div className="project-individual">
-          <div className="row">
-            <div className="one-half column">
-              <h3>Quantum Error Correction Reading</h3>
-            </div>
-            <div className="one-half column">
-              <h5 className="u-pull-right">Advisor: Dr. Qun Li</h5>
-              <h5 className="u-pull-right">
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;August 2022 -
-                May 2023
-              </h5>
-            </div>
-          </div>
-          <h6>William & Mary</h6>
-          <div className="row">
-            <ul>
-              <li>
-                Working on a a quantum error correction scheme using a
-                clustering algorithm, leveraging structure in the Hamming
-                spectrum of a quantum computer’s output.
-              </li>
-              <li>
-                Readings on quantum error correction, surface codes, and
-                hardware error correction schemes.
-              </li>
-            </ul>
-          </div>
+        <ul>
+    
+            <li>{'Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In preparation.'}</li>
+        
+        </ul>
         </div>
-
-        <div className="project-individual">
-          <div className="row">
-            <div className="one-half column">
-              <h3>Quantum Research Group</h3>
-            </div>
-            <div className="one-half column">
-              <h5 className="u-pull-right">Advisor: Dr. Chi-Kwong Li</h5>
-              <h5 className="u-pull-right">September 2022 - May 2023</h5>
-            </div>
-          </div>
-          <h6>William & Mary</h6>
-          <div className="row">
-            <ul>
-              <li>Explored topics in quantum tomography.</li>
-              <li>
-                Explored topics in image processing and recognition using Qiskit
-                and quantum computing algorithms.
-              </li>
-              <li>
-                Approximated unitary operators with a parameterized Pauli group
-                using a trust-region optimization approach.
-              </li>
-            </ul>
-          </div>
+        <div className="project-subtitle">
+          <h3>Research Experience</h3>
         </div>
-
-        <div className="project-individual">
-          <div className="row">
-            <div className="one-half column">
-              <h3>
-                <u>
-                  <a
-                    href="https://github.com/K-L-Chen/WM_Dahlgren_Challenge"
-                    target="_blank"
-                  >
-                    1st AI/ML Challenge @ Dahlgren
-                  </a>
-                </u>
-              </h3>
-            </div>
-            <div className="one-half column">
-              <h5 className="u-pull-right">March 2023</h5>
-            </div>
-          </div>
-          <h6>NSWCDD</h6>
-          <div className="row">
-            <p>
-              I was a member of the William & Mary team invited by
-              <u>
-                <a
-                  href="https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Dahlgren/"
-                  target="_blank"
-                >
-                  NSWCDD
-                </a>
-              </u>
-              to participate in the 1st Artificial Intelligence and Machine
-              Learning Challenge at Dahlgren. There, I developed cutting-edge
-              AI/ML algorithms for automating the scheduling and coordination of
-              advanced weapon systems, competing against teams from other
-              colleges.
-            </p>
-          </div>
-          <div className="row">
-            <p>
-              We first conducted a literature review and wrote a white paper on
-              machine learning approaches to weapon target assignment and
-              munitions scheduling. After acceptance to phase II, we
-              experimented with various approaches utilizing deep learning,
-              reinforcement learning, and genetic algorithms.
-            </p>
-          </div>
-          <div className="row">
-            <p>The W&M team won third place and $20k in prize money.</p>
-          </div>
+    
+            <ExpandableItem
+            title={'Honors Thesis: Surface Code Decoding'}
+            period={'2023 - Present'}
+            institution={'William & Mary'}
+            location={'Williamsburg, VA'}
+            advisor={'Dr. Qun Li'}
+            description={['Investigating surface code decoders.']}
+            />
+        
+            <ExpandableItem
+            title={'Applying Differential Learning to Quantum Federated Learning'}
+            period={'2023'}
+            institution={'William & Mary'}
+            location={'Williamsburg, VA'}
+            advisor={'Dr. Qun Li'}
+            description={['Trained a federated QCNN using the Qiskit Machine Learning library, achieving 89% simulator test accuracy and 70% IBM QPU test accuracy on the MNIST dataset.', 'Implemented differential privacy to obfuscate sensitive client data, and performed a hyperparameter search to find an appropriate level of privacy. ']}
+            />
+        
+            <ExpandableItem
+            title={'First AI/ML Challenge at Dahlgren'}
+            period={'2022 - 2023'}
+            institution={'Naval Surface Warfare Center Dahlgren Division'}
+            location={'Dahlgren, VA'}
+            advisor={'Qun Li'}
+            description={["Contributed to a white paper detailing relevant literature and proposed approaches on the weapon target assignment problem, which resulted in the team's acceptance to the competition.", 'Played a leading role in brainstorming and implementing approaches for automatic scheduling and coordination of advanced weapon systems.', 'Architected, implemented, and trained several approaches to reduce damage to high value assets, including a Deep Q-Learning agent and heuristic-driven Greedy agent.', 'The W&M team won 3rd place and $20,000 in prize money. ']}
+            />
+        
+            <ExpandableItem
+            title={'Quantum Operator Approximation via Nonconvex PSD Programming'}
+            period={'2022'}
+            institution={'William & Mary'}
+            location={'Williamsburg, VA'}
+            advisor={'Dr. Chi-Kwong Li'}
+            description={['Approximated arbitrary quantum operators using the Pauli product rotations, exponentiated elements of the Pauli group. ', 'Transformed problem into nonconvex positive semidefinite programming problem, and optimized using a trust-region approach.']}
+            />
+        
         </div>
-      </div>
-    </div>
-  );
-}
+    );
+    }
+    

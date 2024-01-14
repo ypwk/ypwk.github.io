@@ -21,6 +21,11 @@ ul {
     margin-bottom: 5%
 }
 
+.project-subtitle {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .project-individual {
     margin-top: 2%;
     margin-bottom: 2%
@@ -469,4 +474,99 @@ ul {
     left:0; 
     height:50%; 
     width:100%;
+}
+
+/* Expandable Item
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.expandable-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.expandable-header {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.expandable-header:hover {
+    background-color: #ececec;
+}
+
+.expandable-header {
+    display: flex;
+}
+
+.expandable-header .title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.expandable-header .title h3 {
+    margin: 0;
+    font-size: 1.7em;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.expandable-header .title .details {
+    display: flex;
+    color: #666;
+    justify-content: space-between; 
+    font-size: 1em;
+}
+
+.expandable-header .title .details .left-details, .right-details {
+    flex: 1; 
+}
+
+.expandable-header .title .details .left-details {
+    text-align: left;
+}
+
+.expandable-header .title .details .right-details {
+    text-align: right;
+}
+
+.expandable-header .caret {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.expandable-header .caret.open {
+    transform: rotate(0deg); /* Adjust the angle for the open state */
+}
+
+.expandable-content {
+    padding: 0 15px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+}
+
+.expandable-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+
+.expandable-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.expandable-header-content .date {
+    margin-left: 15px;
 }

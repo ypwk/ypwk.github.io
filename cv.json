@@ -1,0 +1,251 @@
+{
+    "name": "Kevin Yipu Wu",
+    "position": "Undergraduate Student",
+    "department": "CS & Math",
+    "institution": "William & Mary",
+    "contact": {
+        "email": "kwu06@wm.edu",
+        "website": "ypwk.github.io",
+        "github": "https://github.com/ypwk",
+        "linkedin": "https://www.linkedin.com/in/ypwk/",
+        "location": "Williamsburg, VA"
+    },
+    "education": [
+        {
+            "institution": "William & Mary",
+            "location": "Williamsburg, VA",
+            "degree": "B.S. Computer Science and Mathematics Double Major",
+            "gpa": "CS GPA: 3.88/4, GPA: 3.78/4",
+            "period": "2020 - 2024"
+        },
+        {
+            "institution": "Thomas Jefferson High School for Science and Technology",
+            "location": "Alexandria, VA",
+            "degree": "High School",
+            "gpa": "GPA: 4.22/4",
+            "period": "2016 - 2020"
+        }
+    ],
+    "publications": [
+        {
+            "citation": "Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In preparation.",
+            "status": "IN-PREP"
+        }
+    ],
+    "experience": [
+        {
+            "project": "Honors Thesis: Surface Code Decoding",
+            "advisor": "Dr. Qun Li",
+            "period": "2023 - Present",
+            "institution": "William & Mary",
+            "location": "Williamsburg, VA",
+            "details": [
+                "Investigating surface code decoders."
+            ]
+        },
+        {
+            "project": "Applying Differential Learning to Quantum Federated Learning",
+            "advisor": "Dr. Qun Li",
+            "period": "2023",
+            "institution": "William & Mary",
+            "location": "Williamsburg, VA",
+            "details": [
+                "Trained a federated QCNN using the Qiskit Machine Learning library, achieving 89% simulator test accuracy and 70% IBM QPU test accuracy on the MNIST dataset.",
+                "Implemented differential privacy to obfuscate sensitive client data, and performed a hyperparameter search to find an appropriate level of privacy. "
+            ]
+        },
+        {
+            "project": "First AI/ML Challenge at Dahlgren",
+            "advisor": "Qun Li",
+            "period": "2022 - 2023",
+            "location": "Dahlgren, VA",
+            "institution": "Naval Surface Warfare Center Dahlgren Division",
+            "details": [
+                "Contributed to a white paper detailing relevant literature and proposed approaches on the weapon target assignment problem, which resulted in the team's acceptance to the competition.",
+                "Played a leading role in brainstorming and implementing approaches for automatic scheduling and coordination of advanced weapon systems.",
+                "Architected, implemented, and trained several approaches to reduce damage to high value assets, including a Deep Q-Learning agent and heuristic-driven Greedy agent.",
+                "The W&M team won 3rd place and $20,000 in prize money. "
+            ]
+        },
+        {
+            "project": "Quantum Operator Approximation via Nonconvex PSD Programming",
+            "advisor": "Dr. Chi-Kwong Li",
+            "period": "2022",
+            "institution": "William & Mary",
+            "location": "Williamsburg, VA",
+            "details": [
+                "Approximated arbitrary quantum operators using the Pauli product rotations, exponentiated elements of the Pauli group. ",
+                "Transformed problem into nonconvex positive semidefinite programming problem, and optimized using a trust-region approach."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "project": "CV + Website",
+            "link": "https://github.com/ypwk/ypwk.github.io",
+            "period": "2024",
+            "details": [
+                "This website is partially generated via Python script, sourced from a JSON file! This same script and JSON file is also used to generate my CV.",
+                "I did this so I wouldn't have to think about keeping both my CV and website up to date at the same time.",
+                "A work in progress."
+            ]
+        },
+        {
+            "project": "DecoderVIS: Topological QECC Visualization",
+            "link": "https://github.com/ypwk/DecoderVIS",
+            "period": "2023 - Present",
+            "details": [
+                "A topological quantum error correction code visualization written in C++.",
+                "Visualizer simulates a quantum memory experiment carried out on odd distance rotated planar codes, subject to i.i.d. depolarizing noise.",
+                "Implemented minimum weight perfect matching decoding using the LEMON library. ",
+                "Wrote a custom 2D rendering engine from scratch using GLFW and GLM to render the surface code, and created a minimal UI with Hello ImGUI."
+            ]
+        },
+        {
+            "project": "Lumi: LLM-enhanced Voice Assistant",
+            "link": "https://github.com/ypwk/Lumi",
+            "period": "2023",
+            "details": [
+                "This was my term project for CSCI 420: Introduction to Human Computer Interaction. The core idea was to create a contextually-aware voice assistant using LLM-technology.",
+                "This project includes a backend Flask server, which interfaces with a vector database using Psycopg2. This allows Lumi to recall useful information from previous conversations.",
+                "There are several frontends bundled in this project, including a React Native app targeting Android and Windows, and a C++ GUI written with the aid of Hello ImGUI.",
+                "See the link for more information"
+            ]
+        },
+        {
+            "project": "Mimir: Algorithmic Proof Generation",
+            "link": "https://github.com/ypwk/Mimir",
+            "period": "2023",
+            "details": [
+                "A sentential logic proof generator. When given an objective statement and a set of premises, will output steps used to prove the objective statement.",
+                "Utilizes AWS Amplify for hosting and AWS API Gateway for backend infrastructure. The frontend was written in React, and the backend proof generator was written in Python and hosted using AWS Lambda.",
+                "Created for Cypher VIII, William & Mary's Hackathon. Won best UI."
+            ]
+        },
+        {
+            "project": "2048 Player",
+            "period": "2021",
+            "details": [
+                "2048 clone written in Java, complete with a decision-making AI that can beat the game.",
+                "There are two automated players bundled with this project, a Random Player that makes random choices, and a Smart Player that makes choices based on a set of heuristics.",
+                "At each step during execution, the Smart Player calculates a score for the respective up, down, right, and left movements and chooses the highest score.",
+                "To improve performance on my slow laptop, the Smart Player utilizes a dynamic recursive depth to “think more” when it is in trouble. The more empty tiles there are, the less steps it thinks ahead, and vice versa.",
+                "As this was an extension of a class project assigned every semester, I will not disclose the source code."
+            ]
+        },
+        {
+            "project": "ShiHelper",
+            "link": "https://github.com/ypwk/shihelper",
+            "period": "2021",
+            "details": [
+                "A specialized text editor created using React to aid in analysis and composition of Chinese regulated-verse poetry. Included annotations for English, Middle Chinese, and Mandarin. See the link for more information."
+            ]
+        }
+    ],
+    "workExperience": [
+        {
+            "position": "Solutions Architect Intern",
+            "organization": "Amazon Web Services",
+            "location": "Seattle, WA",
+            "period": "2022 - 2023",
+            "details": [
+                "Implemented an end-to-end quantum error mitigation scheme, based on this result. Used Poisson distributions fit on quantum processor metadata to predict and reduce quantum noise. Constructed a quantum circuit transpilation protocol in Python to aid in this endeavor.",
+                "Investigated relevant literature in cloud quantum computing, quantum error mitigation, and LLM retrieval augmented generation.",
+                "Studied for and achieved the Cloud Practitioner and Associate Solutions Architect AWS Certifications.",
+                "Completed mock customer conversations and shadowed customer calls."
+            ]
+        },
+        {
+            "position": "Junior Software Developer",
+            "organization": "ESPX Global Inc.",
+            "location": "McLean, VA",
+            "period": "2021 - 2022",
+            "details": [
+                "Engineered a data lake solution capturing market conditions and features of the electric grid.",
+                "Agilely collaborated remotely with a team of developers to create a minimum viable product conforming to client expectations.",
+                "Selected, acquired, normalized, and analyzed data using Python, AWS services, and SQL.",
+                "Managed and maintained the company website, along with related SSL certificate."
+            ]
+        },
+        {
+            "position": "Student Intern Team Lead",
+            "organization": "Asian Americans in Energy, Environment, and Commerce",
+            "location": "Alexandria, VA",
+            "period": "2019 - 2023",
+            "details": [
+                "Worked in a student team to overhaul the old organization website, and played a key role in updating and improving website functionality, and website migration to new provider.",
+                "Received promotion to team lead after three years.",
+                "Interviewed, hired, trained a team of student applicants. Led this team in pushing website updates and updating functionality."
+            ]
+        }
+    ],
+    "teachingExperience": [],
+    "presentations": [
+        {
+            "category": "PRESENTATION",
+            "title": "Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization",
+            "year": "2024",
+            "authors": "Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang",
+            "type": "Poster",
+            "event": "JMM",
+            "city": "San Francisco",
+            "state": "CA"
+        }
+    ],
+    "outreach": [
+        {
+            "role": "Undergraduate CS Consultant",
+            "organization": "W&M CS Department",
+            "location": "Williamsburg, VA",
+            "period": "2022 - 2024",
+            "details": [
+                "Held office hours twice a week for Programming for Data Science (CSCI 140), Computational Problem Solving (CSCI 141), and Data Structures (CSCI 241) students during semesters.",
+                "Offered advice for debugging code, general guidance for assignments, and helped with conceptual understanding.",
+                "Covered Data Structures, Python, and Pandas."
+            ],
+            "category": "SERVICE"
+        }
+    ],
+    "honors": [
+        {
+            "award": "Phi Beta Kappa",
+            "date": "2023",
+            "institution": "W&M Phi Beta Kappa Chapter",
+            "money": "",
+            "details": ""
+        },
+        {
+            "award": "Elias Paparis Scholarship",
+            "date": "2023",
+            "institution": "W&M Computer Science Department",
+            "money": "2500",
+            "details": "$2,500 merit-based scholarship awarded to an outstanding CS student with unmet financial need."
+        },
+        {
+            "award": "Robert C. and Muriel M. Jennings Scholarship",
+            "date": "2023",
+            "institution": "W&M Phi Beta Kappa Chapter",
+            "money": "3500",
+            "details": "$3,500 merit-based scholarship awarded to an outstanding student with unmet financial need."
+        }
+    ],
+    "skills": {
+        "programming": [
+            "Qiskit",
+            "Amazon Braket",
+            "LaTeX",
+            "Python",
+            "C++",
+            "JavaScript",
+            "SQL",
+            "React",
+            "Java",
+            "C#",
+            "Matlab"
+        ],
+        "languages": [
+            "English (native)",
+            "Chinese (fluent)"
+        ]
+    }
+}
