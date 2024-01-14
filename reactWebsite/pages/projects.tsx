@@ -7,7 +7,7 @@
         <TabInfo tabName="Projects" />
         <div className="row">
         <div className="project-title">
-          <h2>Projects</h2>
+          <h3>Projects</h3>
           <p>Some notable projects that I&apos;ve worked on in the past.</p>
         </div>
     
@@ -29,7 +29,7 @@
                 title={'Lumi: LLM-enhanced Voice Assistant'}
                 period={'2023'}
                 link={'https://github.com/ypwk/Lumi'}
-                description={['This was my term project for CSCI 420: Introduction to Human Computer Interaction. The core idea was to create a contextually-aware voice assistant using LLM-technology.', 'This project includes a backend Flask server, which interfaces with a vector database using Psycopg2. This allows Lumi to recall useful information from previous conversations.', 'There are several frontends bundled in this project, including a React Native app targeting Android and Windows, and a C++ GUI written with the aid of Hello ImGUI.', 'See the link for more information']}
+                description={['This was my term project for CSCI 420: Introduction to Human Computer Interaction. The core idea was to create a contextually-aware voice assistant using LLM-technology.', 'This project includes a backend Flask server, which interfaces with a vector database using Psycopg2. This allows Lumi to recall useful information from previous conversations.', 'There are several frontends bundled in this project, including a React Native app targeting Android and Windows, and a C++ GUI written with the aid of Hello ImGUI.', 'See the above link for more information.']}
                 />
             
                 <ExpandableItem

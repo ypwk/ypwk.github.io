@@ -113,11 +113,11 @@ ul {
     text-transform: uppercase;
 }
 
-@media(max-width: 768px) {
+/* @media(max-width: 768px) {
     .logo {
-        /*       margin-left: 5px; */
+         margin-left: 5px;
     }
-}
+} */
 
 #navbar ul {
     float: right;

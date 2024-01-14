@@ -276,7 +276,7 @@ def generate_website_projects(cv_data):
         <TabInfo tabName="Projects" />
         <div className="row">
         <div className="project-title">
-          <h2>Projects</h2>
+          <h3>Projects</h3>
           <p>Some notable projects that I&apos;ve worked on in the past.</p>
         </div>
     """
@@ -424,7 +424,7 @@ def generate_website(cv_data):
 file_path = "cv.json"
 
 # Read and print the data
-# cv_data = read_json_file(file_path)
-# generate_cv(cv_data)
+cv_data = read_json_file(file_path)
+generate_cv(cv_data)
 cv_data = read_json_file(file_path)
 generate_website(cv_data)
