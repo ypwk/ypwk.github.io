@@ -550,14 +550,14 @@ ul {
 }
 
 .expandable-content {
-    padding: 0 15px;
     background-color: #fff;
-    overflow: hidden;
     transition: height 0.2s ease-in-out;
+    height: auto;
+    overflow: hidden;
 }
 
 .expandable-content p {
-    margin: 10px 0;
+    margin: 20px 0;
     line-height: 1.6;
     padding: 0 15px;
 }

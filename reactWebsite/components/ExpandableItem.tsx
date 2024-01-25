@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 interface ExpandableItemProps {
   title: string;
@@ -21,8 +21,32 @@ const ExpandableItem: React.FC<ExpandableItemProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const lastWindowWidth = useRef(0);
 
   const toggleOpen = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const updateContentHeight = () => {
+        if (isOpen && contentRef.current) {
+          contentRef.current.style.height = "auto";
+          contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+        }
+      };
+      const handleResize = () => {
+        if (window.innerWidth !== lastWindowWidth.current) {
+          lastWindowWidth.current = window.innerWidth;
+          updateContentHeight();
+        }
+      };
+      lastWindowWidth.current = window.innerWidth;
+      window.addEventListener("resize", handleResize);
+      updateContentHeight();
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [isOpen]);
 
   return (
     <div className="expandable-item">
