@@ -41,7 +41,6 @@ const ExpandableItem: React.FC<ExpandableItemProps> = ({
       };
       lastWindowWidth.current = window.innerWidth;
       window.addEventListener("resize", handleResize);
-      updateContentHeight();
       return () => {
         window.removeEventListener("resize", handleResize);
       };
