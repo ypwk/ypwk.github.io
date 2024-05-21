@@ -208,6 +208,20 @@
     ],
     "honors": [
         {
+            "award": "AQET Scholar",
+            "date": "2024",
+            "institution": "University of Washington AQET Program",
+            "money": "",
+            "details": ""
+        },
+        {
+            "award": "Stephen K. Park Undergraduate Scholarship Award",
+            "date": "2024",
+            "institution": "W&M Computer Science Department",
+            "money": "1500",
+            "details": "An award given to a graduating Computer Science undergraduate student who during their undergraduate career established a record of academic excellence and, equally important, demonstrated a continuing interest in computer science research and development."
+        },
+        {
             "award": "Phi Beta Kappa",
             "date": "2023",
             "institution": "W&M Phi Beta Kappa Chapter",
