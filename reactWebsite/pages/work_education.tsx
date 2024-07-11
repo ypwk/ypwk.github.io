@@ -41,19 +41,19 @@
         </div>
     
             <InfoCard
+            title={'University of Washington'}
+            period={'2024 - Present'}
+            institution={'Ph.D.'}
+            location={'Seattle, WA'}
+            advisor={''}
+            />
+        
+            <InfoCard
             title={'William & Mary'}
             period={'2020 - 2024'}
             institution={'B.S. Computer Science and Mathematics Double Major'}
             location={'Williamsburg, VA'}
             advisor={'CS GPA: 3.88/4, GPA: 3.78/4'}
-            />
-        
-            <InfoCard
-            title={'Thomas Jefferson High School for Science and Technology'}
-            period={'2016 - 2020'}
-            institution={'High School'}
-            location={'Alexandria, VA'}
-            advisor={'GPA: 4.22/4'}
             />
         
         </div>

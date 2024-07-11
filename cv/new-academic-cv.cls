@@ -21,7 +21,7 @@
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{academic-cv}[2017/02/05 v1.6.1 Academic Curriculum Vitae Class]
+\ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
@@ -91,17 +91,6 @@
 
 \RequirePackage{hanging}
 
-\usepackage[
-    backend=biber,
-    style=authoryear-icomp,
-    sortlocale=de_DE,
-    natbib=true,
-    url=false, 
-    doi=true,
-    eprint=false
-]{biblatex}
-\addbibresource{pubs.bib}
-
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -162,7 +151,7 @@
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
-\setbool{acvSectionColorHighlight}{false}
+\setbool{acvSectionColorHighlight}{true}
 
 % Awesome section color
 \def\@sectioncolor#1#2#3{%

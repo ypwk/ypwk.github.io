@@ -1,40 +1,26 @@
-%% Start of file `awesome-cv.cls'.
-% Awesome CV Class File
+%% Start of file `academic-cv.cls'.
+% Academic CV Class File
 %
 % This class has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
+% And modified by Jessi Rick <jrick@uwyo.edu>
 %
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Notes:
-% 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
-% 2) It has been written in such a way that under most circumstances you
-% should not need to edit it.
-%
-% Class license:
-% LPPL v1.3c (http://www.latex-project.org/lppl)
-%
-
 
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{academic-cv}[2017/02/05 v1.6.1 Academic Curriculum Vitae Class]
+\ProvidesClass{academic-cv}[2019/03/08 v1.0 Academic Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
 %-------------------------------------------------------------------------------
 %                Class options
 %
-% (need to be done before the external package loading, for example because
-% we need \paperwidth, \paperheight and \@ptsize to be defined before loading
-% geometry and fancyhdr)
 %-------------------------------------------------------------------------------
 % Options for draft or final
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
+
 % Inherit options of article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}
@@ -88,20 +74,8 @@
   pdfsubject={},
   pdfkeywords={}
 }
-
-\RequirePackage{hanging}
-
-\usepackage[
-    backend=biber,
-    style=authoryear-icomp,
-    sortlocale=de_DE,
-    natbib=true,
-    url=false, 
-    doi=true,
-    eprint=false
-]{biblatex}
-\addbibresource{pubs.bib}
-
+% Needed for hanging indents
+\usepackage{hanging}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -116,6 +90,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
+% these are defaults, but can be modified in the cv.tex file
 \geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
 
 %% Header & Footer
@@ -145,20 +120,10 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
-\definecolor{darktext}{HTML}{414141}
-\colorlet{text}{darkgray}
-\colorlet{graytext}{gray}
-\colorlet{lighttext}{lightgray}
-% Awesome colors
-\definecolor{awesome-emerald}{HTML}{00A388}
-\definecolor{awesome-skyblue}{HTML}{0395DE}
-\definecolor{awesome-red}{HTML}{DC3522}
-\definecolor{awesome-pink}{HTML}{EF4089}
-\definecolor{awesome-orange}{HTML}{FF6138}
-\definecolor{awesome-nephritis}{HTML}{27AE60}
-\definecolor{awesome-concrete}{HTML}{95A5A6}
-\definecolor{awesome-darknight}{HTML}{131A28}
-\colorlet{awesome}{awesome-red}
+\definecolor{darktext}{HTML}{000000}
+\colorlet{text}{black}
+\colorlet{graytext}{black}
+\colorlet{lighttext}{black}
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
@@ -174,7 +139,7 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\setfontfamily\FA[Path=\@fontdir]{FontAwesome}
+\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,

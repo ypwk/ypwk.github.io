@@ -2,12 +2,30 @@ import json
 import os
 from datetime import datetime as dt
 from collections import defaultdict
+from rich.console import Console
+from time import time
 
 CV_IDX = os.path.join("cv")
 CV_LOC = os.path.join(CV_IDX, "cv")
 WEB_LOC = os.path.join("reactWebsite", "pages")
 
+console = Console()
 
+
+def time_function(func):
+    def wrapper(*args, **kwargs):
+        start_time = time()
+        result = func(*args, **kwargs)
+        elapsed_time = time() - start_time
+        console.print(
+            f"[bold green]Executed {func.__name__} in {elapsed_time:.4f} seconds[/bold green]"
+        )
+        return result
+
+    return wrapper
+
+
+@time_function
 def read_json_file(file_path):
     """Reads a JSON file and returns the data."""
     try:
@@ -15,11 +33,11 @@ def read_json_file(file_path):
             data = json.load(file)
             return data
     except FileNotFoundError:
-        print("File not found.")
+        console.print("[bold red]File not found.[/bold red]")
     except json.JSONDecodeError:
-        print("Error decoding JSON.")
+        console.print("[bold red]Error decoding JSON.[/bold red]")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        console.print(f"[bold red]An error occurred: {e}[/bold red]")
 
 
 def escape_tex_special_chars(text):
@@ -43,26 +61,31 @@ def escape_tex_special_chars(text):
     return text
 
 
+@time_function
 def generate_cv_education(cv_data):
-    print("Generating Education...")
+    console.print("[bold blue]Generating Education...[/bold blue]")
     tex = "\\cvsection{Education}\n\\begin{cventries}\n"
     for edu in cv_data["education"]:
         edu = {key: escape_tex_special_chars(value) for key, value in edu.items()}
         tex += f"\n\\cventry{{{edu['degree']}}}{{{edu['institution']}}}"
         tex += f"{{{edu['location']}}}{{{edu['period']}}}\n"
-        tex += "{\n\\begin{cvitems}\n"
-        tex += f"\\item {{{edu['gpa']}}}\n"
-        tex += "\\end{cvitems}\n}\n"
+        if "gpa" in edu.keys() and edu["gpa"] != "":
+            tex += "{\n\\begin{cvitems}\n"
+            tex += f"\\item {{{edu['gpa']}}}\n"
+            tex += "\\end{cvitems}\n}\n"
+        else:
+            tex += "{}"
     tex += "\n\\end{cventries}\n"
     with open(os.path.join(CV_LOC, "education.tex"), "w") as f:
         f.write(tex)
 
 
+@time_function
 def generate_cv_work(cv_data):
     if len(cv_data["workExperience"]) == 0:
         return
 
-    print("Generating Professional Experience...")
+    console.print("[bold blue]Generating Professional Experience...[/bold blue]")
     tex = "\\cvsection{Professional Experience}\\begin{cvskills}\n"
     for work in cv_data["workExperience"]:
         work = {key: escape_tex_special_chars(value) for key, value in work.items()}
@@ -73,12 +96,12 @@ def generate_cv_work(cv_data):
         f.write(tex)
 
 
+@time_function
 def generate_cv_publications(cv_data):
-    # PUB, IN-REV, IN-PREP
     if len(cv_data["publications"]) == 0:
         return
 
-    print("Generating Publications...")
+    console.print("[bold blue]Generating Publications...[/bold blue]")
     tex = "\\cvsection{Publications}\n\n"
     pub_cont = {
         "IN-PREP": "\\begin{cvpubs}\n\\small \\color{black}\n",
@@ -87,7 +110,7 @@ def generate_cv_publications(cv_data):
     }
     for pub in cv_data["publications"]:
         pub = {key: escape_tex_special_chars(value) for key, value in pub.items()}
-        pub_cont[pub["status"]] += f"\\cvpub{{{pub['citation']}}}\n"
+        pub_cont[pub["status"]] += f"\\cvpub{{{pub['citation']}}}\n\n"
     if pub_cont["PUB"] != "\\begin{cvpubs}\n":
         tex += "\n\\cvsubsection{Published}\n\n" + pub_cont["PUB"] + "\\end{cvpubs}\n"
     if pub_cont["IN-REV"] != "\\begin{cvpubs}\n":
@@ -100,11 +123,12 @@ def generate_cv_publications(cv_data):
         f.write(tex)
 
 
+@time_function
 def generate_cv_awards(cv_data):
     if len(cv_data["honors"]) == 0:
         return
 
-    print("Generating Awards...")
+    console.print("[bold blue]Generating Awards...[/bold blue]")
     aw_by_year = defaultdict(list)
     for award in cv_data["honors"]:
         award = {key: escape_tex_special_chars(value) for key, value in award.items()}
@@ -126,11 +150,12 @@ def generate_cv_awards(cv_data):
         f.write(tex)
 
 
+@time_function
 def generate_cv_presentations(cv_data):
     if len(cv_data["presentations"]) == 0:
         return
 
-    print("Generating Presentations...")
+    console.print("[bold blue]Generating Presentations...[/bold blue]")
     categories = {
         "Invited Talks": lambda p: "TALK" in p["category"],
         "Contributed Presentations": lambda p: "PRESENTATION" in p["category"],
@@ -144,12 +169,10 @@ def generate_cv_presentations(cv_data):
             if len(authors) > 1
             else authors[0]
         )
-        return f"    \\cvpub{{{{{formatted_authors}}}. {p['year']}. {p['title']}. {p['type']}: {p['event']}, {p['city']}, {p['state']}.}}\n"
+        return f"    \\cvpub{{{{{formatted_authors}}}. {p['year']}. {p['title']}. {p['type']}: {p['event']}, {p['city']}, {p['state']}.}}\n\n"
 
     # Generate LaTeX code
     tex = "\\cvsection{Presentations}\n\n"
-    # tex += "\\vspace{-0.3cm}\n"
-    # tex += "\\begin{small}\\textit{* presenting author; \\textsuperscript{+} mentored undergraduate}\\end{small}\n"
 
     for category, filter_func in categories.items():
         filtered_presentations = [p for p in cv_data["presentations"] if filter_func(p)]
@@ -164,28 +187,46 @@ def generate_cv_presentations(cv_data):
         f.write(tex)
 
 
+@time_function
 def generate_cv_research_experience(cv_data):
     if len(cv_data["experience"]) == 0:
         return
 
-    print("Generating Research Experience...")
+    console.print("[bold blue]Generating Research Experience...[/bold blue]")
+
+    # short
+
     tex = "\\cvsection{Research Experience}\n\n\\begin{cventries}\n"
     for exp in cv_data["experience"]:
         exp = {key: escape_tex_special_chars(value) for key, value in exp.items()}
         tex += "\\cventry\n"
-        tex += f"{{Advisor: {exp['advisor']}}}\n{{{exp['institution']}}}\n{{{exp['location']}}}\n{{{exp['period']}}}\n"
-        tex += f"{{\n\\begin{{cvitems}}\n\\item{{{exp['project']}}}\n\\end{{cvitems}}\n}}\n\n"
+        tex += f"{{Advisor: {exp['advisor']}}}\n{{{exp['project']}}}\n{{{exp['institution']}}}\n{{{exp['period']}}}{{}}\n"
     tex += "\n\\end{cventries}\n"
+
+    # full (doesn't work since all list entries are None.... JSON to python dict conversion)
+
+    # tex = "\\cvsection{Research Experience}\n\n\\begin{cventries}\n"
+    # for exp in cv_data["experience"]:
+    #     exp = {key: escape_tex_special_chars(value) for key, value in exp.items()}
+    #     tex += "\\cventry\n"
+    #     tex += f"{{Advisor: {exp['advisor']}}}\n{{{exp['project']}}}\n{{{exp['institution']}}}\n{{{exp['period']}}}\n"
+    #     tex += "{{\\begin{cvitems}\n"
+    #     for det in exp["details"]:
+    #         det = {key: escape_tex_special_chars(value) for key, value in det.items()}
+    #         tex += "\\item{{{exp['details']}}}\n"
+    #     tex += "\\end{cvitems}\n}}\n\n"
+    # tex += "\n\\end{cventries}\n"
 
     with open(os.path.join(CV_LOC, "research.tex"), "w") as f:
         f.write(tex)
 
 
+@time_function
 def generate_cv_extracurricular(cv_data):
     if len(cv_data["outreach"]) == 0:
         return
 
-    print("Generating Outreach...")
+    console.print("[bold blue]Generating Outreach...[/bold blue]")
     categories = {
         "Service and Outreach": lambda p: "SERVICE" in p["category"],
         "Development": lambda p: "DEVELOPMENT" in p["category"],
@@ -195,8 +236,6 @@ def generate_cv_extracurricular(cv_data):
 
     # Generate LaTeX code
     tex = "\\cvsection{Outreach \\& Professional Development}\n\n"
-    # tex += "\\vspace{-0.3cm}\n"
-    # tex += "\\begin{small}\\textit{* presenting author; \\textsuperscript{+} mentored undergraduate}\\end{small}\n"
 
     for category, filter_func in categories.items():
         ec = [e for e in cv_data["outreach"] if filter_func(e)]
@@ -230,9 +269,10 @@ def generate_cv_extracurricular(cv_data):
         f.write(tex)
 
 
+@time_function
 def generate_cv(cv_data):
-    print("Generating CV...")
-    print("Generating Header...")
+    console.print("[bold blue]Generating CV...[/bold blue]")
+    console.print("[bold blue]Generating Header...[/bold blue]")
     c_date = dt.now().strftime("%b, %Y")
     contact = {
         key: escape_tex_special_chars(value)
@@ -261,12 +301,14 @@ def generate_cv(cv_data):
     generate_cv_presentations(cv_data)
     generate_cv_research_experience(cv_data)
     generate_cv_extracurricular(cv_data)
+    # generate_bib_file(cv_data, file_path="pubs.bib")
 
-    print("Done Generating!")
+    console.print("[bold green]Done Generating![/bold green]")
 
 
+@time_function
 def generate_website_projects(cv_data):
-    print("Generating Projects...")
+    console.print("[bold blue]Generating Projects...[/bold blue]")
     r = """
     import TabInfo from "@/components/TabInfo";
     import ExpandableItem from "@/components/ExpandableItem";
@@ -309,8 +351,9 @@ def generate_website_projects(cv_data):
         f.write(r)
 
 
+@time_function
 def generate_website_worked(cv_data):
-    print("Generating Work/Education...")
+    console.print("[bold blue]Generating Work/Education...[/bold blue]")
     r = """
     import TabInfo from "@/components/TabInfo";
     import ExpandableItem from "@/components/ExpandableItem";
@@ -362,8 +405,9 @@ def generate_website_worked(cv_data):
         f.write(r)
 
 
+@time_function
 def generate_website_research(cv_data):
-    print("Generate Research...")
+    console.print("[bold blue]Generating Research...[/bold blue]")
     r = """
     import TabInfo from "@/components/TabInfo";
     import ExpandableItem from "@/components/ExpandableItem";
@@ -412,12 +456,60 @@ def generate_website_research(cv_data):
         f.write(r)
 
 
+@time_function
 def generate_website(cv_data):
-    print("Generating Website...")
+    console.print("[bold blue]Generating Website...[/bold blue]")
     generate_website_projects(cv_data)
     generate_website_worked(cv_data)
     generate_website_research(cv_data)
-    print("Done Generating!")
+    console.print("[bold green]Done Generating![/bold green]")
+
+
+def format_bib_entry(
+    entry_type, citation, title, authors, year, journal=None, note=None
+):
+    """Formats a BibTeX entry."""
+    bib_entry = f"@{entry_type}{{{citation.split()[0]},\n"
+    bib_entry += f'  title={{"{title}"}},\n'
+    bib_entry += f'  author={{"{authors}"}},\n'
+    bib_entry += f'  year={{"{year}"}},\n'
+    if journal:
+        bib_entry += f'  journal={{"{journal}"}},\n'
+    if note:
+        bib_entry += f'  note={{"{note}"}},\n'
+    bib_entry += "}\n\n"
+    return bib_entry
+
+
+def generate_bib_file(cv_data, file_path="pubs.bib"):
+    """Generates a BibTeX file from CV data."""
+    bib_entries = ""
+
+    # Process publications
+    for pub in cv_data["publications"]:
+        bib_entries += format_bib_entry(
+            entry_type="article",
+            citation=pub["citation"],
+            title=pub["title"],
+            authors=pub["authors"],
+            year=pub["year"],
+            journal=pub.get("journal"),
+        )
+
+    # Process presentations
+    for pres in cv_data["presentations"]:
+        bib_entries += format_bib_entry(
+            entry_type="misc",
+            citation=pres["title"],
+            title=pres["title"],
+            authors=pres["authors"],
+            year=pres["year"],
+            note=f"{pres['type']} at {pres['event']}, {pres['city']}, {pres['state']}",
+        )
+
+    # Write to file
+    with open(file_path, "w", encoding="utf-8") as bib_file:
+        bib_file.write(bib_entries)
 
 
 # Path to your JSON file

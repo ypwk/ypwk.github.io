@@ -12,7 +12,7 @@
         </div>
         <ul>
     
-            <li>{'Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In preparation.'}</li>
+            <li>{'Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In review.'}</li>
         
         </ul>
         </div>
@@ -21,12 +21,12 @@
         </div>
     
             <ExpandableItem
-            title={'Honors Thesis: Surface Code Decoding'}
-            period={'2023 - Present'}
+            title={'Honors Thesis: Improving the Scalability of Neural Network Surface Code Decoders'}
+            period={'2023 - 2024'}
             institution={'William & Mary'}
             location={'Williamsburg, VA'}
             advisor={'Dr. Qun Li'}
-            description={['Investigating surface code decoders.']}
+            description={['Used state compression techniques to improve the scalability of recurrent neural network decoders for the surface code.']}
             />
         
             <ExpandableItem
@@ -41,7 +41,7 @@
             <ExpandableItem
             title={'First AI/ML Challenge at Dahlgren'}
             period={'2022 - 2023'}
-            institution={'Naval Surface Warfare Center Dahlgren Division'}
+            institution={'NSWCDD'}
             location={'Dahlgren, VA'}
             advisor={'Qun Li'}
             description={["Contributed to a white paper detailing relevant literature and proposed approaches on the weapon target assignment problem, which resulted in the team's acceptance to the competition.", 'Played a leading role in brainstorming and implementing approaches for automatic scheduling and coordination of advanced weapon systems.', 'Architected, implemented, and trained several approaches to reduce damage to high value assets, including a Deep Q-Learning agent and heuristic-driven Greedy agent.', 'The W&M team won 3rd place and $20,000 in prize money. ']}

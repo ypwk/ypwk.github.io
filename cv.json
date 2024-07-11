@@ -1,46 +1,54 @@
 {
     "name": "Kevin Yipu Wu",
-    "position": "Undergraduate Student",
-    "department": "CS & Math",
-    "institution": "William & Mary",
+    "position": "Doctoral Student",
+    "department": "Electrical and Computer Engineering",
+    "institution": "University of Washington",
     "contact": {
         "email": "kwu06@wm.edu",
         "website": "ypwk.github.io",
         "github": "https://github.com/ypwk",
         "linkedin": "https://www.linkedin.com/in/ypwk/",
-        "location": "Williamsburg, VA"
+        "location": "Seattle, WA"
     },
     "education": [
+        {
+            "institution": "University of Washington",
+            "location": "Seattle, WA",
+            "degree": "Ph.D.",
+            "gpa": "",
+            "period": "2024 - Present"
+        },
         {
             "institution": "William & Mary",
             "location": "Williamsburg, VA",
             "degree": "B.S. Computer Science and Mathematics Double Major",
             "gpa": "CS GPA: 3.88/4, GPA: 3.78/4",
             "period": "2020 - 2024"
-        },
-        {
-            "institution": "Thomas Jefferson High School for Science and Technology",
-            "location": "Alexandria, VA",
-            "degree": "High School",
-            "gpa": "GPA: 4.22/4",
-            "period": "2016 - 2020"
         }
     ],
     "publications": [
         {
-            "citation": "Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In preparation.",
-            "status": "IN-PREP"
+            "title": "Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization",
+            "authors": [
+                "Chi-Kwong Li",
+                "Kevin Y. Wu",
+                "Zherui Zhang"
+            ],
+            "year": 2024,
+            "citation": "Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In review.",
+            "status": "IN-REV"
         }
     ],
     "experience": [
         {
-            "project": "Honors Thesis: Surface Code Decoding",
+            "project": "Honors Thesis: Improving the Scalability of Neural Network Surface Code Decoders",
             "advisor": "Dr. Qun Li",
-            "period": "2023 - Present",
+            "period": "2023 - 2024",
             "institution": "William & Mary",
             "location": "Williamsburg, VA",
+            "link": "https://scholarworks.wm.edu/honorstheses/2176/",
             "details": [
-                "Investigating surface code decoders."
+                "Used state compression techniques to improve the scalability of recurrent neural network decoders for the surface code."
             ]
         },
         {
@@ -59,7 +67,7 @@
             "advisor": "Qun Li",
             "period": "2022 - 2023",
             "location": "Dahlgren, VA",
-            "institution": "Naval Surface Warfare Center Dahlgren Division",
+            "institution": "NSWCDD",
             "details": [
                 "Contributed to a white paper detailing relevant literature and proposed approaches on the weapon target assignment problem, which resulted in the team's acceptance to the competition.",
                 "Played a leading role in brainstorming and implementing approaches for automatic scheduling and coordination of advanced weapon systems.",
@@ -181,6 +189,16 @@
     ],
     "teachingExperience": [],
     "presentations": [
+        {
+            "category": "PRESENTATION",
+            "title": "Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization",
+            "year": "2024",
+            "authors": "Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang",
+            "type": "Talk",
+            "event": "MAO",
+            "city": "Reno",
+            "state": "Nevada"
+        },
         {
             "category": "PRESENTATION",
             "title": "Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization",
