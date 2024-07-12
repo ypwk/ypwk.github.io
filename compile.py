@@ -436,7 +436,20 @@ def generate_website_research(cv_data):
     """
 
     for p in cv_data["experience"]:
-        r += f"""
+        if "link" in p.keys():
+            r += f"""
+            <ExpandableItem
+            title={{'{p['project']}'}}
+            period={{'{p['period']}'}}
+            institution={{'{p['institution']}'}}
+            location={{'{p['location']}'}}
+            advisor={{'{p['advisor']}'}}
+            link={{'{p['link']}'}}
+            description={{{p['details']}}}
+            />
+            """
+        else:
+            r += f"""
             <ExpandableItem
             title={{'{p['project']}'}}
             period={{'{p['period']}'}}
@@ -445,7 +458,7 @@ def generate_website_research(cv_data):
             advisor={{'{p['advisor']}'}}
             description={{{p['details']}}}
             />
-        """
+            """
 
     r += """
         </div>

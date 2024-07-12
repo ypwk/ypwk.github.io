@@ -32,7 +32,7 @@ export default function Page() {
           </p>
         </div>
         <div className="one-half column">
-          {/* <img className="img-fit" src="images/headshot.jpg" /> */}
+          <img className="img-fit" src="images/headshot.jpg" />
         </div>
       </div>
     </div>
