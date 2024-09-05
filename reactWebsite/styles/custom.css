@@ -125,8 +125,8 @@ ul {
     /* margin-right: 14px; */
     margin-top: -2px;
     text-align: right;
-    transition: transform 0.5s ease-out;
-    -webkit-transition: transform 0.5s ease-out;
+    /* transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out; */
 }
 
 @media(max-width: 728px) {
@@ -148,7 +148,7 @@ ul {
 #navbar li a {
     color: rgb(13, 26, 38);
     display: block;
-    font-size: 0.7em;
+    font-size: 0.8em;
     height: 50px;
     letter-spacing: 1px;
     margin: 0 20px;
