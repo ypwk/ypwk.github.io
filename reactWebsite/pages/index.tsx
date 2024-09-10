@@ -7,7 +7,7 @@ export default function Page() {
       <TabInfo tabName="Home" />
       <div className="row">
         <div className="one-half column project-title">
-          <h1>Kevin Wu</h1>
+          <h1>Kevin Yipu Wu</h1>
         </div>
         <div className="one-half column project-title">
           <a href="https://www.wm.edu/" target="_blank">
