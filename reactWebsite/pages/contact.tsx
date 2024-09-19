@@ -28,7 +28,7 @@ export default function Page() {
           </li>
           <li>
             <u>
-              <a href="mailto:kevinypw@gmail.com" target="_blank">
+              <a href="mailto:ypwk@uw.edu" target="_blank">
                 Email
               </a>
             </u>
