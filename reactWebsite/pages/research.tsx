@@ -21,13 +21,22 @@
         </div>
     
             <ExpandableItem
-            title={'Honors Thesis: Improving the Scalability of Neural Network Surface Code Decoders'}
+            title={'Computer Generated Holography for Creating Optical Tweezers'}
+            period={'2024 - Now'}
+            institution={'University of Washington'}
+            location={'Seattle, WA'}
+            advisor={'Dr. Maxwell Parsons'}
+            description={['Implemented iterative phase reconstruction algorithms to generate spot arrays using a phase spatial light modulators, reaching 92% simulated power efficiency.', 'Investigating alternative neural network phase reconstruction algorithms for improved power efficiency and trap depth.', 'Extending algorithm to 3D trap arrays through wavefront propagation techniques.']}
+            />
+            
+            <ExpandableItem
+            title={'Improving the Scalability of Neural Network Surface Code Decoders'}
             period={'2023 - 2024'}
             institution={'William & Mary'}
             location={'Williamsburg, VA'}
             advisor={'Dr. Qun Li'}
             link={'https://scholarworks.wm.edu/honorstheses/2176/'}
-            description={['Used state compression techniques to improve the scalability of recurrent neural network decoders for the surface code.']}
+            description={['Designed transformer and structured selective state space models to decode the rotated planar code, a type of quantum error correction code.', 'Implemented and trained the models using PyTorch to decode low distance rotated planar codes.', 'Scaled decoders to higher distance codes using state compression techniques.']}
             />
             
             <ExpandableItem
@@ -44,7 +53,7 @@
             period={'2022 - 2023'}
             institution={'NSWCDD'}
             location={'Dahlgren, VA'}
-            advisor={'Qun Li'}
+            advisor={'Dr. Qun Li'}
             description={["Contributed to a white paper detailing relevant literature and proposed approaches on the weapon target assignment problem, which resulted in the team's acceptance to the competition.", 'Played a leading role in brainstorming and implementing approaches for automatic scheduling and coordination of advanced weapon systems.', 'Architected, implemented, and trained several approaches to reduce damage to high value assets, including a Deep Q-Learning agent and heuristic-driven Greedy agent.', 'The W&M team won 3rd place and $20,000 in prize money. ']}
             />
             
