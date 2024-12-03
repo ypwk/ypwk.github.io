@@ -35,7 +35,6 @@
             institution={'William & Mary'}
             location={'Williamsburg, VA'}
             advisor={'Dr. Qun Li'}
-            link={'https://scholarworks.wm.edu/honorstheses/2176/'}
             description={['Designed transformer and structured selective state space models to decode the rotated planar code, a type of quantum error correction code.', 'Implemented and trained the models using PyTorch to decode low distance rotated planar codes.', 'Scaled decoders to higher distance codes using state compression techniques.']}
             />
             

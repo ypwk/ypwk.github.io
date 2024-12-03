@@ -18,13 +18,13 @@ export default function Page() {
       <div className="row">
         <div className="one-half column">
           <p>
-            Hello there! My name is Kevin Wu, and I am a doctoral student at the
-            University of Washington in the Electrical and Computer Engineering
-            department.
+            Hello there! My name is Kevin Wu, and I am a first year doctoral
+            student at the University of Washington in the Electrical and
+            Computer Engineering department.
           </p>
           <p>
-            Right now, my interests lie in quantum computing and machine
-            learning.
+            Right now, my interests lie in neutral atom quantum computing,
+            quantum error correction, and machine learning.
           </p>
           <p>In my free time, I like to play the violin and go to the gym!</p>
         </div>

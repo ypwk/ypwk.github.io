@@ -223,11 +223,11 @@ def generate_cv_awards(cv_data, style="v"):
         tex = "\\begin{rSection}{Honors}\n\\begin{itemize}\n"
         for year in sorted_years:
             for award in aw_by_year[year]:
-                money = f"\\$ {award['money']}" if award["money"] else ""
+                money = f"\\${award['money']}" if award["money"] else ""
                 if money == "":
                     tex += f"\t\\item \\textbf {{{award['award']}}}, \\textit {{{award['institution']}}}, {year}\n"
                 else:
-                    tex += f"\t\\item \\textbf {{{award['award']}}}, \\textit {{{award['institution']}}}, {money}, {year}\n"
+                    tex += f"\t\\item \\textbf {{{award['award']}}}, {money}, \\textit {{{award['institution']}}}, {year}\n"
         tex += "\\end{itemize}\n\\end{rSection}"
 
     write_tex_file(generate_output_path(style)["LOC"], "honors.tex", tex)
@@ -419,8 +419,8 @@ def write_main_file(cv_data, style="v"):
         tex += f"\\address{{{escape_tex_special_chars(contact['email'])} \\ \\\\ \\ \\href{{{contact['website']}}}{{{contact['website']}}}"
         tex += f" \\ \\\\ \\ {escape_tex_special_chars(contact['location'])}}}\n\n"
         tex += "\\begin{document}\n"
-        tex += "\\input{cv/education.tex}\n\\input{cv/professional.tex}\n\\input{cv/publications.tex}\n\\input{cv/honors.tex}\n"
-        tex += "\\input{cv/presentation.tex}\n\\input{cv/teaching.tex}\n\\input{cv/mentoring.tex}\n\\input{cv/research.tex}\n\\input{cv/extracurricular.tex}\n"
+        tex += "\\input{cv/education.tex}\n\\input{cv/publications.tex}\n\\input{cv/research.tex}\n\\input{cv/presentation.tex}\n\n\\input{cv/honors.tex}\n"
+        tex += "\\input{cv/professional.tex}\\input{cv/teaching.tex}\n\\input{cv/mentoring.tex}\n\\input{cv/extracurricular.tex}\n"
         tex += "\\end{document}"
     elif style == "n":
         tex = "\\documentclass[11pt, letterpaper, draft]{academic-cv}\n"
@@ -432,8 +432,8 @@ def write_main_file(cv_data, style="v"):
         tex += f"\\email{{{contact['email']}}}\n\\homepage{{{contact['website']}}}\n"
         tex += f"\\github{{{contact['github']}}}\n\n"
         tex += f"\\begin{{document}}\n\\makecvheader\n\\makecvfooter{{{c_date}}}{{{cv_data['name']} ~~~·~~~ Curriculum Vitae}}{{\\thepage}}\n"
-        tex += "\\input{cv/education.tex}\n\\input{cv/professional.tex}\n\\input{cv/publications.tex}\n\\input{cv/honors.tex}\n"
-        tex += "\\input{cv/presentation.tex}\n\\input{cv/teaching.tex}\n\\input{cv/mentoring.tex}\n\\input{cv/research.tex}\n\\input{cv/extracurricular.tex}\n"
+        tex += "\\input{cv/education.tex}\n\\input{cv/publications.tex}\n\\input{cv/research.tex}\n\\input{cv/presentation.tex}\n\n\\input{cv/honors.tex}\n"
+        tex += "\\input{cv/professional.tex}\\input{cv/teaching.tex}\n\\input{cv/mentoring.tex}\n\\input{cv/extracurricular.tex}\n"
         tex += "\\end{document}"
 
     write_tex_file(generate_output_path(style)["IDX"], "cv.tex", tex)

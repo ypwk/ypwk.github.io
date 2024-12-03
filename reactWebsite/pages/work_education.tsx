@@ -32,7 +32,7 @@
             period={'2022 - 2023'}
             institution={'Asian Americans in Energy, Environment, and Commerce'}
             location={'Alexandria, VA'}
-            description={['Interviewed, hired, trained a team of student applicants as team lead.', 'Led this team in pushing website updates and updating functionality.', "Mentored and developed interns' technical and professional skills"]}
+            description={['Interviewed, hired, trained a team of student applicants as team lead.', 'Led this team in pushing website updates and updating functionality.', "Mentored and developed interns' technical and professional skills."]}
             />
         
         </div>
