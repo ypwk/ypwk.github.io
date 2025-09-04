@@ -18,7 +18,7 @@ export default function Page() {
       <div className="row">
         <div className="one-half column">
           <p>
-            Hello there! My name is Kevin Wu, and I am a first year doctoral
+            Hello there! My name is Kevin Wu, and I am a second year doctoral
             student at the University of Washington in the Electrical and
             Computer Engineering department.
           </p>
@@ -26,7 +26,7 @@ export default function Page() {
             Right now, my interests lie in neutral atom quantum computing,
             quantum error correction, and machine learning.
           </p>
-          <p>In my free time, I like to play the violin and go to the gym!</p>
+          <p>In my free time, I like to scull or sweep on various and go to the gym!</p>
         </div>
         <div className="one-half column">
           <img className="img-fit" src="images/headshot.jpg" />

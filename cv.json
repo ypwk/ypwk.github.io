@@ -41,15 +41,15 @@
     ],
     "experience": [
         {
-            "project": "Computer Generated Holography for Creating Optical Tweezers",
+            "project": "Computer Generated Holography for Generating 3D Reconfigurable Optical Tweezer Arrays",
             "advisor": "Dr. Maxwell Parsons",
             "period": "2024 - Now",
             "institution": "University of Washington",
             "location": "Seattle, WA",
             "details": [
-                "Implemented iterative phase reconstruction algorithms to generate spot arrays using a phase spatial light modulators, reaching 92% simulated power efficiency.",
-                "Investigating alternative neural network phase reconstruction algorithms for improved power efficiency and trap depth.",
-                "Extending algorithm to 3D trap arrays through wavefront propagation techniques."
+                "Implemented iterative and gradient descent phase reconstruction algorithms to generate multi-layer 3D tweezer arrays using a phase spatial light modulator.",
+                "Training a U-Net encoder-decoder phase reconstruction neural network to generate phase maps for 3D tweezer arrays.",
+                "Implemented a pipeline to characterize 3D trap arrays in an experimental setup."
             ]
         },
         {

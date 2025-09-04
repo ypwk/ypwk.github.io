@@ -21,12 +21,12 @@
         </div>
     
             <ExpandableItem
-            title={'Computer Generated Holography for Creating Optical Tweezers'}
+            title={'Computer Generated Holography for Generating 3D Reconfigurable Optical Tweezer Arrays'}
             period={'2024 - Now'}
             institution={'University of Washington'}
             location={'Seattle, WA'}
             advisor={'Dr. Maxwell Parsons'}
-            description={['Implemented iterative phase reconstruction algorithms to generate spot arrays using a phase spatial light modulators, reaching 92% simulated power efficiency.', 'Investigating alternative neural network phase reconstruction algorithms for improved power efficiency and trap depth.', 'Extending algorithm to 3D trap arrays through wavefront propagation techniques.']}
+            description={['Implemented iterative and gradient descent phase reconstruction algorithms to generate multi-layer 3D tweezer arrays using a phase spatial light modulator.', 'Training a U-Net encoder-decoder phase reconstruction neural network to generate phase maps for 3D tweezer arrays.', 'Implemented a pipeline to characterize 3D trap arrays in an experimental setup.']}
             />
             
             <ExpandableItem
@@ -35,6 +35,7 @@
             institution={'William & Mary'}
             location={'Williamsburg, VA'}
             advisor={'Dr. Qun Li'}
+            link={'https://scholarworks.wm.edu/honorstheses/2176/'}
             description={['Designed transformer and structured selective state space models to decode the rotated planar code, a type of quantum error correction code.', 'Implemented and trained the models using PyTorch to decode low distance rotated planar codes.', 'Scaled decoders to higher distance codes using state compression techniques.']}
             />
             
