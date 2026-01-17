@@ -12,7 +12,7 @@
         </div>
         <ul>
     
-            <li>{'Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Efficient Circuit-Based Quantum State Tomography via Sparse Entry Optimization. In review.'}</li>
+            <li>{'Chi-Kwong Li, Kevin Y. Wu, and Zherui Zhang. Minimum-Spanning-Tree Tomography of Sparse Quantum States With and Without Entanglement. In review.'}</li>
         
         </ul>
         </div>
@@ -21,12 +21,39 @@
         </div>
     
             <ExpandableItem
-            title={'Computer Generated Holography for Generating 3D Reconfigurable Optical Tweezer Arrays'}
-            period={'2024 - Now'}
+            title={'Generation of 3D Reconfigurable Holograms for Optical Control'}
+            period={'2024-2025'}
             institution={'University of Washington'}
             location={'Seattle, WA'}
             advisor={'Dr. Maxwell Parsons'}
-            description={['Implemented iterative and gradient descent phase reconstruction algorithms to generate multi-layer 3D tweezer arrays using a phase spatial light modulator.', 'Training a U-Net encoder-decoder phase reconstruction neural network to generate phase maps for 3D tweezer arrays.', 'Implemented a pipeline to characterize 3D trap arrays in an experimental setup.']}
+            description={['Designed and generated multi-depth 3D holographic phase patterns for experimental optical systems.', 'Studied tradeoffs between hologram dimensionality, control fidelity, and computational complexity.', 'Experimentally evaluated 3D holograms in laboratory optical setups.']}
+            />
+            
+            <ExpandableItem
+            title={'Phase Retrieval via Wirtinger-Flow for 3D Holographic Field Generation'}
+            period={'2024-2025'}
+            institution={'University of Washington'}
+            location={'Seattle, WA'}
+            advisor={'Dr. Maxwell Parsons'}
+            description={['Investigated Wirtinger Flow-based optimization methods for phase retrieval in holographic field generation, designing new loss functions resulting in better performance than the current SoTA.', 'Studied convergence behavior and robustness of nonconvex optimization methods for multi-plane 3D holography.', 'Evaluated suitability of Wirtinger Flow methods for experimental holographic control using a phase-only spatial light modulator.']}
+            />
+            
+            <ExpandableItem
+            title={'Investigation of 3D Geometries for qLDPC Code Implementation'}
+            period={'2024-2025'}
+            institution={'University of Washington'}
+            location={'Seattle, WA'}
+            advisor={'Dr. Maxwell Parsons'}
+            description={['Found that 3D layouts in neutral atom quantum computers have the potential to accelerate stabilizer measurement rounds for qLDPC codes by a significant factor, under certain assumptions.', 'Studied connectivity, routing, and locality constraints in 3D versus 2D hardware geometries.', 'Analyzed implications for scalable fault-tolerant quantum architectures.']}
+            />
+            
+            <ExpandableItem
+            title={'Construction and Characterization of a 2D Magneto-Optical Trap'}
+            period={'2025'}
+            institution={'University of Washington'}
+            location={'Seattle, WA'}
+            advisor={'Dr. Maxwell Parsons'}
+            description={['Contributed to the assembly, alignment, and characterization of a 2D magneto-optical trap (MOT).', 'Assisted with optical alignment, magnetic field configuration, and system debugging.', 'Supported characterization of atomic beam flux and trap stability for downstream experimental use.']}
             />
             
             <ExpandableItem

@@ -1,0 +1,69 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{li2024efficientcircuitbasedquantumstate}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=3b97fcb5868e4819b72eeae850be7e90}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chi-Kwong},
+           giveni={C\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=f30c72dcbbfd86f6f05597a81c8b7c02}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Kevin\bibnamedelima Yipu},
+           giveni={K\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=31be3b415f431f5b71be1b9200694dcd}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zherui},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc578907e398f400288b5caf60245286}
+      \strng{fullhash}{fc578907e398f400288b5caf60245286}
+      \strng{bibnamehash}{fc578907e398f400288b5caf60245286}
+      \strng{authorbibnamehash}{fc578907e398f400288b5caf60245286}
+      \strng{authornamehash}{fc578907e398f400288b5caf60245286}
+      \strng{authorfullhash}{fc578907e398f400288b5caf60245286}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{quant-ph}
+      \field{eprinttype}{arXiv}
+      \field{note}{Under review}
+      \field{title}{Minimum-Spanning-Tree Tomography of Sparse Quantum States With and Without Entanglement}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2407.20298
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2407.20298
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2407.20298
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

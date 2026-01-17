@@ -26,7 +26,7 @@ export default function Page() {
             Right now, my interests lie in neutral atom quantum computing,
             quantum error correction, and machine learning.
           </p>
-          <p>In my free time, I like to scull or sweep on various and go to the gym!</p>
+          <p>In my free time, I like to scull or sweep on Seattle's waterways and lakes and go to the gym!</p>
         </div>
         <div className="one-half column">
           <img className="img-fit" src="images/headshot.jpg" />

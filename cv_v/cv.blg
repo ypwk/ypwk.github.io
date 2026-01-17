@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'cv.blg'
+[76] biber-MSWIN64:340> INFO - === 
+[109] Biber.pm:419> INFO - Reading 'cv.bcf'
+[181] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[189] Biber.pm:4419> INFO - Processing section 0
+[198] Biber.pm:4610> INFO - Looking for bibtex file 'pubs.bib' for section 0
+[242] bibtex.pm:1713> INFO - LaTeX decoding ...
+[246] bibtex.pm:1519> INFO - Found BibTeX data source 'pubs.bib'
+[276] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[277] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[277] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[277] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[280] bbl.pm:660> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
+[281] bbl.pm:763> INFO - Output to cv.bbl
